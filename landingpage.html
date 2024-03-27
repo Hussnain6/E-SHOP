@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navbar with Logo and Attributes</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(brandpic.jpeg); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+  }
+  nav {
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative; 
+    z-index: 2; 
+  }
+  .logo {
+    font-weight: bold;
+    font-size: 12px; 
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  .nav-links li a 
+  {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease; 
+  }
+  .nav-links li a:hover {
+  color: #ffd700; /* Change color on hover */
+}
+
+
+  /* Style for hero section */
+  .hero-section 
+  {
+    position: relative; /* Add position relative */
+    text-align: center;
+    padding: 100px 20px; /* Adjust padding as needed */
+    color: #000; /* Change text color to black */
+    z-index: 1; /* Ensure hero section is below navbar */
+  }
+  .hero-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #000; /* Change text color to black */
+  }
+  .hero-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #000; /* Change text color to black */
+  }
+  .hero-section .cta-button {
+    background-color: #ffd700;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  .hero-section .cta-button:hover {
+    background-color: #f0c700;
+  }
+
+  /* Style for video */
+  .video {
+    width: 70%; /* Set video width to 50% of the container */
+    height: auto; /* Ensure aspect ratio is maintained */
+    z-index: -1; /* Ensure video is below other elements */
+    border-radius: 15px; /* Add border-radius for rounded corners */
+    border-radius: 50%; 
+  }
+
+  /* Style for clothing section */
+  .container {
+    margin: 0 auto; /* Center the container horizontally */
+    max-width: 1200px; /* Set maximum width for the container */
+    padding: 0 20px; /* Add padding to the container */
+  }
+  .clothing-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  .category {
+    text-align: center;
+    flex: 1 1 calc(25% - 20px); /* Adjust size equally */
+    max-width: calc(25% - 20px); /* Adjust max-width equally */
+    position: relative; /* Add position relative for hover effect */
+    overflow: hidden; /* Hide overflow to prevent content from spilling */
+  }
+  .category:hover img {
+    transform: scale(1.1); /* Scale up image on hover */
+  }
+  .category img {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+  }
+  .category p {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  .category .icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo"><img src="Shop Swiftly.png" alt="ShopSwiftly Logo" style="max-width: 30px;"></div> <!-- Add logo image -->
+  <ul class="nav-links">
+    <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="signin.html"><i class="fas fa-sign-in-alt"></i> Sign In</a></li>
+    <li><a href="signup.html"><i class="fas fa-user-plus"></i> Sign Up</a></li>
+    <li><a href="#"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+    <li><a href="#"><i class="fas fa-user"></i> Account</a></li>
+  </ul>
+</nav>
+
+<section class="hero-section">
+  <h1>Welcome to ShopSwiftly</h1>
+  <p>Your one-stop shop for all your needs</p>
+  <video class="video" controls autoplay muted loop>
+    <source src="brand.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</section>
+<div class="container"> <!-- Container for clothing section -->
+  <section class="clothing-section">
+    <div class="category">
+      <img src="pic1.jpeg" alt="Men's Wear">
+      <p>T-Shirts</p>
+      <div class="icons">
+      </div>
+    </div>
+    <div class="category">
+      <img src="sweat shirts.jpeg" alt="Kids' Wear">
+      <p>Sweat Shirts</p>
+    </div>
+    <div class="category">
+      <img src="hoodies.jpeg" alt="Kids' Wear">
+      <p>hoodies</p>
+    </div>
+    <div class="category">
+      <img src="jeans blues.jpeg" alt="Kids' Wear">
+      <p>Jeans</p>
+    </div>
+    <div class="category">
+      <img src="jeans.jpeg" alt="Kids' Wear">
+      <p>Jeans</p>
+    </div>
+    <div class="category">
+      <img src="shoes.jpeg" alt="Kids' Wear">
+      <p>Shoes</p>
+    </div>
+    <div class="category">
+      <img src="watches.jpeg" alt="Kids' Wear">
+      <p>watches</p>
+    </div>
+   
+    <div class="category">
+      <img src="Wallets.jpeg" alt="Kids' Wear">
+      <p>Wallets</p>
+    </div>
+    <div class="category">
+      <img src="glasses.jpeg" alt="Kids' Wear">
+      <p>Glasses</p>
+    </div>
+    <div class="category">
+      <img src="Jewellery.jpeg" alt="Kids' Wear">
+      <p>Jewellery</p>
+    </div>
+    <div class="category">
+      <img src="frag.jpeg" alt="Kids' Wear">
+      <p>Fragnance</p>
+    </div>
+    <div class="category">
+      <img src="Caps.jpeg" alt="Kids' Wear">
+      <p>Caps</p>
+    </div>
+  </section>
+</div>
+</body>
+</html>
