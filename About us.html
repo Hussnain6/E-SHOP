@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes</title>
+    <!-- Importing Roboto Font and FontAwesome -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Importing jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style>
+        /* Custom styles */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        /* Footer Section styles */
+        .footer-section {
+            background-color: #212121;
+            color: #fff;
+            padding: 40px 20px;
+        }
+
+        /* Newsletter form */
+        .newsletter-form {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .newsletter-form input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            width: 60%;
+            max-width: 300px;
+        }
+
+        .newsletter-form button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #d2652d;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* Footer widgets */
+        .footer-widget {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .footer-widget div {
+            flex: 1;
+            padding: 10px;
+            min-width: 200px;
+            box-sizing: border-box;
+        }
+
+        .footer-widget h4 {
+            margin-bottom: 10px;
+        }
+
+        .footer-widget ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-widget ul li {
+            margin-bottom: 5px;
+        }
+
+        /* Social links */
+        .social-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 20px;
+            display: inline-block;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #bbb2ad;
+        }
+
+        /* Customer Reviews */
+        .customer-reviews {
+            background-color: #fff;
+            padding: 40px 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .customer-reviews h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .review {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+
+        .review:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .review p {
+            font-style: italic;
+        }
+
+        .review span {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Add the nav bar from the original code here -->
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="inner-header">
+                <div class="logo">
+                    <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                </div>
+                <div class="header-right">
+                    <img src="img/icons/search.png" alt="" class="search-trigger">
+                    <img src="img/icons/man.png" alt="">
+                    <a href="#">
+                        <img src="img/icons/bag.png" alt="">
+                        <span>2</span>
+                    </a>
+                </div>
+                <div class="user-access">
+                    <a href="sign-in.html">Register</a>
+                    <a href="sign-in.html" class="in">Sign in</a>
+                </div>
+                <nav class="main-menu mobile-menu">
+                    <ul>
+                        <li><a class="active" href="./index.html">Home</a></li>
+                        <li><a">Shop</a>
+                            <ul class="sub-menu">
+                                <li><a href="product-page.html">Product Page</a></li>
+                                <li><a href="shopping cart.html">Shopping Cart</a></li>
+                                <li><a href="check-out.html">Check out</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./product-page.html">About US</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Welcome to Quotes Page</h1>
+        <p>Placeholder for other content.</p>
+
+        <!-- Customer Reviews Section -->
+        <div class="customer-reviews">
+            <h2>Customer Reviews</h2>
+            <div class="review">
+                <p>"I absolutely love the quality of the clothing! The fabric is so soft and comfortable."</p>
+                <span>- Jane Doe</span>
+            </div>
+            <div class="review">
+                <p>"Great customer service and fast shipping. I'll definitely be a returning customer!"</p>
+                <span>- John Smith</span>
+            </div>
+            <div class="review">
+                <p>"The designs are unique and stylish. I've received so many compliments on my new outfits."</p>
+                <span>- Emily Johnson</span>
+            </div>
+            <div class="review">
+                <p>"Affordable prices for such high-quality clothing. Highly recommend to anyone looking for new wardrobe staples."</p>
+                <span>- Michael Brown</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="container">
+            <!-- Newsletter Form -->
+            <div class="newsletter-form">
+                <form action="#">
+                    <input type="text" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+
+            <!-- Footer Widgets -->
+            <div class="footer-widget">
+                <div>
+                    <h4>About Us</h4>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Community</li>
+                        <li>Jobs</li>
+                        <li>Shipping</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li>Search</li>
+                        <li>Privacy Policy</li>
+                        <li>2019 Lookbook</li>
+                        <li>Shipping & Delivery</li>
+                        <li>Gallery</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li>Free Shipping</li>
+                        <li>Free Returns</li>
+                        <li>Our Franchising</li>
+                        <li>Terms and Conditions</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Information</h4>
+                    <ul>
+                        <li>Payment Methods</li>
+                        <li>Times and Shipping Costs</li>
+                        <li>Product Returns</li>
+                        <li>Shipping Methods</li>
+                        <li>Conformity of the Products</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links">
+                <a href="#" class="instagram"><i class="fa fa-instagram"></i> <span>Instagram</span></a>
+                <a href="#" class="pinterest"><i class="fa fa-pinterest"></i> <span>Pinterest</span></a>
+                <a href="#" class="facebook"><i class="fa fa-facebook"></i> <span>Facebook</span></a>
+                <a href="#" class="twitter"><i class="fa fa-twitter"></i> <span>Twitter</span></a>
+                <a href="#" class="youtube"><i class="fa fa-youtube"></i> <span>Youtube</span></a>
+                <a href="#" class="tumblr"><i class="fa fa-tumblr-square"></i> <span>Tumblr</span></a>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+</body>
+</html>
+

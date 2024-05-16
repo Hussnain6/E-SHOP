@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <!-- Custom CSS for Checkout Page -->
+    <style>
+        /* Custom styles for the checkout page */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        h3 {
+            margin-bottom: 20px;
+        }
+
+        .checkout-form input[type="text"] {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .order-table h3, .payment-method h3 {
+            margin-bottom: 20px;
+        }
+
+        .order-table p {
+            margin: 0 0 10px;
+        }
+
+        .cart-item span {
+            font-weight: bold;
+        }
+
+        .cart-total {
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+
+        .payment-method ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .payment-method ul li {
+            margin-bottom: 10px;
+        }
+
+        .payment-method ul img {
+            margin-left: 10px;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="inner-header">
+                <div class="logo">
+                    <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                </div>
+                <div class="header-right">
+                    <img src="img/icons/search.png" alt="" class="search-trigger">
+                    <img src="img/icons/man.png" alt="">
+                    <a href="#">
+                        <img src="img/icons/bag.png" alt="">
+                        <span>2</span>
+                    </a>
+                </div>
+                <div class="user-access">
+                    <a href="sign-in.html">Register</a>
+                    <a href="sign-in.html" class="in">Sign in</a>
+                </div>
+                <nav class="main-menu mobile-menu">
+                    <ul>
+                        <li><a class="active" href="./index.html">Home</a></li>
+                        <li><a>Shop</a>
+                            <ul class="sub-menu">
+                                <li><a href="product-page.html">Product Page</a></li>
+                                <li><a href="shoping cart.html">Shopping Cart</a></li>
+                                <li><a href="check-out.html">Check out</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./About us.html">About US</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Page Add Section Begin -->
+    <section class="page-add">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="page-breadcrumb">
+                        <h2>Checkout<span>.</span></h2>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <img src="img/add.jpg" alt="Ad Image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page Add Section End -->
+
+    <!-- Cart Total Page Begin -->
+    <section class="cart-total-page spad">
+        <div class="container">
+            <form action="delivery.html" class="checkout-form" id="checkoutForm">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3>Your Information</h3>
+                    </div>
+                    <div class="col-lg-9">
+                        <!-- User Information Fields -->
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label>First Name*</label>
+                                <input type="text" id="firstName" placeholder="First Name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label>Last Name*</label>
+                                <input type="text" id="lastName" placeholder="Last Name" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label>Street Address*</label>
+                                <input type="text" id="streetAddress" placeholder="Street Address" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label>City*</label>
+                                <input type="text" id="city" placeholder="City" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label>Country*</label>
+                                <input type="text" id="country" placeholder="Country" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label>Post Code/ZIP*</label>
+                                <input type="text" id="postCode" placeholder="Post Code/ZIP" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label>Phone*</label>
+                                <input type="text" id="phone" placeholder="Phone" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="order-table">
+                            <h3>Your Order</h3>
+                            <div class="cart-item">
+                                <span>Product:</span>
+                                <p id="product-name">Product Name</p>
+                            </div>
+                            <div class="cart-item">
+                                <span>Price:</span>
+                                <p id="product-price">$0.00</p>
+                            </div>
+                            <div class="cart-item">
+                                <span>Quantity:</span>
+                                <p id="product-quantity">0</p>
+                            </div>
+                            <div class="cart-item">
+                                <span>Shipping Fee:</span>
+                                <p id="shipping-fee">$0.00</p>
+                            </div>
+                            <div class="cart-total">
+                                <span>Total:</span>
+                                <p id="total-price">$0.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="payment-method">
+                            <h3>Payment</h3>
+                            <ul>
+                                <li>Paypal <img src="img/paypal.jpg" alt="Paypal"></li>
+                                <li>Credit/Debit Card <img src="img/mastercard.jpg" alt="Mastercard"></li>
+                                <li>
+                                    <input type="radio" id="two">
+                                    <label for="two">Pay when you receive the package</label>
+                                </li>
+                            </ul>
+                            <button type="submit" id="submitButton">Place your order</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Cart Total Page End -->
+
+    <!-- Js Plugins -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript for Checkout Page -->
+    <script>
+        // Function to display the order summary
+        function displayOrderSummary() {
+            // Retrieve the cart from localStorage
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Define the shipping fee (you can adjust this value as needed)
+            const shippingFee = 10;
+
+            // Calculate the total price and quantity
+            let totalPrice = 0;
+            let totalQuantity = 0;
+
+            // Variables to hold product names and prices
+            let productNames = [];
+            let productPrices = [];
+
+            // Iterate over each cart item
+            cart.forEach(item => {
+                // Calculate the total price and quantity
+                totalPrice += item.price * item.quantity;
+                totalQuantity += item.quantity;
+
+                // Store the product name and price
+                productNames.push(item.name);
+                productPrices.push(`$${item.price.toFixed(2)}`);
+            });
+
+            // Add the shipping fee to the total price
+            totalPrice += shippingFee;
+
+            // Display the product names and prices
+            document.getElementById('product-name').textContent = productNames.join(', ');
+            document.getElementById('product-price').textContent = productPrices.join(', ');
+
+            // Display the total quantity
+            document.getElementById('product-quantity').textContent = totalQuantity;
+
+            // Display the shipping fee
+            document.getElementById('shipping-fee').textContent = `$${shippingFee.toFixed(2)}`;
+
+            // Display the total price
+            document.getElementById('total-price').textContent = `$${totalPrice.toFixed(2)}`;
+        }
+
+        // Initialize the order summary display on page load
+        document.addEventListener('DOMContentLoaded', displayOrderSummary);
+
+        // Function to handle form submission
+        function handleFormSubmission(event) {
+            event.preventDefault();
+
+            // Collect customer data from the form
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const streetAddress = document.getElementById('streetAddress').value;
+            const city = document.getElementById('city').value;
+            const country = document.getElementById('country').value;
+            const postCode = document.getElementById('postCode').value;
+            const phone = document.getElementById('phone').value;
+
+            // Create a CSV string with the customer data
+            const csvData = `"First Name","Last Name","Street Address","City","Country","Post Code/ZIP","Phone"\n"${firstName}","${lastName}","${streetAddress}","${city}","${country}","${postCode}","${phone}"`;
+
+            // Create a Blob object containing the CSV data
+            const blob = new Blob([csvData], { type: 'text/csv' });
+
+            // Create a download link for the Blob
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'customer_information.csv';
+
+            // Append the link to the document body and click it programmatically
+            document.body.appendChild(link);
+            link.click();
+
+            // Display a success message
+            alert('Your data has been stored successfully.');
+
+            // Redirect to the delivery.html page
+            window.location.href = 'delivery.html';
+        }
+
+        // Attach the form submission event listener
+        document.getElementById('checkoutForm').addEventListener('submit', handleFormSubmission);
+    </script>
+</body>
+
+</html>
+
+

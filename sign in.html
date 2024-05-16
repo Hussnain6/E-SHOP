@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In and Sign Up</title>
+    <!-- Add your custom styles -->
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style>
+        /* Styling for forms, buttons, and input fields */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            border: 1px solid #ccc;
+            padding: 16px;
+            border-radius: 8px;
+            width: 300px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="inner-header">
+                <div class="logo">
+                    <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                </div>
+                <div class="header-right">
+                    <img src="img/icons/search.png" alt="" class="search-trigger">
+                    <img src="img/icons/man.png" alt="">
+                    <a href="#">
+                        <img src="img/icons/bag.png" alt="">
+                        <span>2</span>
+                    </a>
+                </div>
+                <div class="user-access">
+                    <a href="#">Register</a>
+                    <a href="#" class="in">Sign in</a>
+                </div>
+                <nav class="main-menu mobile-menu">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./categories.html">Shop</a>
+                            <ul class="sub-menu">
+                                <li><a href="product-page.html">Product Page</a></li>
+                                <li><a href="shopping-cart.html">Shopping Card</a></li>
+                                <li><a href="check-out.html">Check out</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./product-page.html">About</a></li>
+                        <li><a href="./check-out.html">Blog</a></li>
+                        <li><a class="active" href="./contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <!-- Sign-Up Form -->
+        <div id="signUpForm">
+            <h2>Sign Up</h2>
+            <form id="signUpFormForm" method="post">
+                <input type="text" id="signUpUsername" placeholder="Username" required>
+                <input type="email" id="signUpEmail" placeholder="Email" required>
+                <input type="password" id="signUpPassword" placeholder="Password" required>
+                <button type="submit" id="signUpButton">Sign Up</button>
+            </form>
+            <p>
+                Already have an account? <button id="signInButton" type="button">Sign in here</button>
+            </p>
+        </div>
+
+        <!-- Sign-In Form -->
+        <div id="signInForm" style="display: none;">
+            <h2>Sign In</h2>
+            <form id="signInFormForm" method="post">
+                <input type="email" id="signInEmail" placeholder="Email" required>
+                <input type="password" id="signInPassword" placeholder="Password" required>
+                <button type="submit" id="signInButton">Sign In</button>
+            </form>
+            <p>
+                Don't have an account? <button id="signUpButton" type="button">Sign up here</button>
+            </p>
+            <p>
+                Forgot your password? <button id="forgetPasswordButton" type="button">Reset password</button>
+            </p>
+        </div>
+
+        <!-- Forget Password Form -->
+        <div id="forgetPasswordForm" style="display: none;">
+            <h2>Forget Password</h2>
+            <form id="forgetPasswordFormForm" method="post">
+                <input type="email" id="forgetPasswordEmail" placeholder="Email" required>
+                <input type="password" id="newPassword" placeholder="New Password" required>
+                <button type="submit" id="changePasswordButton">Change Password</button>
+            </form>
+            <p>
+                Remember your password? <button id="signInButton2" type="button">Sign in here</button>
+            </p>
+        </div>
+    </div>
+    <!-- JavaScript script for functionality -->
+    <script>
+        // Define the backend base URL
+        const backendBaseUrl = 'http://localhost:3000';
+
+        // Toggle between sign-in, sign-up, and forget password forms
+        document.getElementById("signInButton").addEventListener("click", showSignIn);
+        document.getElementById("signUpButton").addEventListener("click", showSignUp);
+        document.getElementById("forgetPasswordButton").addEventListener("click", showForgetPassword);
+        document.getElementById("signInButton2").addEventListener("click", showSignIn); // For Forget Password form
+
+        // Handle the sign-up form submission
+        document.getElementById("signUpFormForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById("signUpUsername").value.trim();
+            const email = document.getElementById("signUpEmail").value.trim();
+            const password = document.getElementById("signUpPassword").value.trim();
+
+            const requestData = {
+                username,
+                email,
+                password,
+            };
+
+            try {
+                const response = await fetch(`${backendBaseUrl}/signup`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(requestData),
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    alert('User created successfully!');
+                    showSignIn(); // Move to sign-in form
+                } else {
+                    alert(`Sign-up failed: ${data.error}`);
+                }
+            } catch (error) {
+                console.error('Error during sign-up:', error);
+                alert('An error occurred. Please try again.');
+            }
+        });
+
+        // Handle the sign-in form submission
+        document.getElementById("signInFormForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            const email = document.getElementById("signInEmail").value.trim();
+            const password = document.getElementById("signInPassword").value.trim();
+
+            const requestData = {
+                email,
+                password,
+            };
+
+            try {
+                const response = await fetch(`${backendBaseUrl}/signin`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(requestData),
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    alert('Sign-in successful!');
+                    localStorage.setItem('token', data.token);
+                    // Redirect to index.html
+                    window.location.href = 'index.html';
+                } else {
+                    alert(`Sign-in failed: ${data.error}`);
+                }
+            } catch (error) {
+                console.error('Error during sign-in:', error);
+                alert('An error occurred during sign-in. Please try again later.');
+            }
+        });
+
+        // Handle the forget password form submission
+        document.getElementById("forgetPasswordFormForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            const email = document.getElementById("forgetPasswordEmail").value.trim();
+            const newPassword = document.getElementById("newPassword").value.trim();
+
+            const requestData = {
+                email,
+                newPassword,
+            };
+
+            try {
+                const response = await fetch(`${backendBaseUrl}/forgetpassword`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(requestData),
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    alert('Password changed successfully!');
+                    showSignIn(); // Move to sign-in form
+                } else {
+                   
+                    alert(`Password change failed: ${data.error}`);
+                }
+            } catch (error) {
+                console.error('Error during password change:', error);
+                alert('An error occurred. Please try again.');
+            }
+        });
+
+        // Functions to toggle between forms
+        function showSignUp() {
+            document.getElementById("signInForm").style.display = "none";
+            document.getElementById("forgetPasswordForm").style.display = "none";
+            document.getElementById("signUpForm").style.display = "block";
+        }
+
+        function showSignIn() {
+            document.getElementById("signUpForm").style.display = "none";
+            document.getElementById("forgetPasswordForm").style.display = "none";
+            document.getElementById("signInForm").style.display = "block";
+        }
+
+        function showForgetPassword() {
+            document.getElementById("signInForm").style.display = "none";
+            document.getElementById("signUpForm").style.display = "none";
+            document.getElementById("forgetPasswordForm").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
+
+

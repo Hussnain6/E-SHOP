@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <!-- Custom CSS for Product Page -->
+    <style>
+        /* Custom styles for the product page */
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .product-buttons {
+            margin-top: 10px;
+        }
+
+        .product-image {
+            position: relative;
+        }
+
+        .product-status {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 0 0 8px 0;
+        }
+
+        .product-buttons button {
+            margin-right: 10px;
+        }
+
+        /* View Cart button styles */
+        .view-cart-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .view-cart-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="inner-header">
+                <div class="logo">
+                    <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                </div>
+                <div class="header-right">
+                    <img src="img/icons/search.png" alt="" class="search-trigger">
+                    <img src="img/icons/man.png" alt="">
+                    <a href="#">
+                        <img src="img/icons/bag.png" alt="">
+                        <span>2</span>
+                    </a>
+                </div>
+                <div class="user-access">
+                    <a href="#">Register</a>
+                    <a href="#" class="in">Sign in</a>
+                </div>
+                <nav class="main-menu mobile-menu">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a>Shop</a>
+                            <ul class="sub-menu">
+                                <li><a href="product-page.html">Product Page</a></li>
+                                <li><a href="shopping cart.html">Shopping Card</a></li>
+                                <li><a href="check-out.html">Check out</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./product-page.html">About</a></li>
+                        <li><a href="./check-out.html">Blog</a></li>
+                        <li><a class="active" href="./contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Header Info Begin -->
+    <div class="header-info">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="header-item">
+                        <img src="img/icons/delivery.png" alt="">
+                        <p>Free shipping on orders over $30 in USA</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-left text-lg-center">
+                    <div class="header-item">
+                        <img src="img/icons/voucher.png" alt="">
+                        <p>20% Student Discount</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-left text-xl-right">
+                    <div class="header-item">
+                    <img src="img/icons/sales.png" alt="">
+                    <p>30% off on dresses. Use code: 30OFF</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header Info End -->
+    <!-- Header End -->
+
+    <!-- Product Cards Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="row">
+                <!-- Product Cards -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/jeans.jpeg" alt="Blue Jeans" class="img-fluid">
+                            <div class="product-status new">New</div>
+                        </div>
+                        <div class="product-content">
+                            <h3>Blue Jeans</h3>
+                            <p class="price">$22.90</p>
+                            <div class="product-buttons">
+                                <button class="btn btn-success add-to-cart" data-name="Blue Jeans" data-price="22.90" data-image="img/jeans.jpeg">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/glasses.jpeg" alt="Glasses" class="img-fluid">
+                            <div class="product-status sale">Sale</div>
+                        </div>
+                        <div class="product-content">
+                            <h3>Glasses</h3>
+                            <p class="price">$15.90</p>
+                            <div class="product-buttons">
+                                <button class="btn btn-success add-to-cart" data-name="Glasses" data-price="15.90" data-image="img/glasses.jpeg">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/frag.jpeg" alt="Fragrance" class="img-fluid">
+                            <div class="product-status sale">Sale</div>
+                        </div>
+                        <div class="product-content">
+                            <h3>Fragrance</h3>
+                            <p class="price">$15.90</p>
+                            <div class="product-buttons">
+                                <button class="btn btn-success add-to-cart" data-name="Fragrance" data-price="15.90" data-image="img/frag.jpeg">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/Caps.jpeg" alt="Cap" class="img-fluid">
+                            <div class="product-status sale">Sale</div>
+                        </div>
+                        <div class="product-content">
+                            <h3>Cap</h3>
+                            <p class="price">$5</p>
+                            <div class="product-buttons">
+                                <button class="btn btn-success add-to-cart" data-name="Cap" data-price="5" data-image="img/Caps.jpeg">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/sweat shirts.jpeg" alt="Sweatshirt" class="img-fluid">
+                            <div class="product-status sale">Sale</div>
+                        </div>
+                        <div class="product-content">
+                            <h3>Sweatshirt</h3>
+                            <p class="price">$15</p>
+                            <div class="product-buttons">
+                                <button class="btn btn-success add-to-cart" data-name="Sweatshirt" data-price="15" data-image="img/sweat shirts.jpeg">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/watches.jpeg" alt="Watch" class="img-fluid">
+                            <div class="product-status sale">Sale</div>
+                        </div>
+                        <div class="product-content">
+                            <h3>Watch</h3>
+                            <p class="price">$20</p>
+                            <div class="product-buttons">
+                                <button class="btn btn-success add-to-cart" data-name="Watch" data-price="20" data-image="img/watches.jpeg">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/Wallets.jpeg" alt="Wallet" class="img-fluid">
+                            <div class="product-status sale">Sale</div>
+                        </div>
+                        <div class="product-content">
+                            <h3>Wallet</h3>
+                            <p class="price">$10</p>
+                            <div class="product-buttons">
+                                <button class="btn btn-success add-to-cart" data-name="Wallet" data-price="10" data-image="img/Wallets.jpeg">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Repeat similar blocks for other products -->
+            </div>
+        </div>
+    </section>
+
+    <!-- View Cart Button -->
+    <button class="view-cart-button" onclick="goToCartPage()">View Cart</button>
+
+    <!-- JavaScript -->
+    <script>
+        const MAX_CART_SIZE = 8;
+
+        // Event listener for "Add to Cart" buttons
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', event => {
+                    // Get the product details from the data attributes
+                    const button = event.target;
+                    const productName = button.getAttribute('data-name');
+                    const productPrice = parseFloat(button.getAttribute('data-price'));
+                    const productImage = button.getAttribute('data-image');
+
+                    // Create a new product object
+                    const product = {
+                        name: productName,
+                        price: productPrice,
+                        image: productImage,
+                        quantity: 1
+                    };
+
+                    // Add the product to the cart
+                    addToCart(product);
+                });
+            });
+        });
+
+        // Function to add a product to the shopping cart
+        function addToCart(product) {
+            // Get the existing cart from localStorage or initialize it if it doesn't exist
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Calculate the total number of items in the cart
+            let totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+
+            // Check if adding the product will exceed the cart's maximum capacity
+            if (totalItems + product.quantity > MAX_CART_SIZE) {
+                alert('Your cart is full! You can only have up to 8 items in your cart.');
+                return;
+            }
+
+            // Check if the product already exists in the cart
+            const existingProduct = cart.find(item => item.name === product.name);
+            if (existingProduct) {
+                // Increment the quantity of the existing product
+                existingProduct.quantity += product.quantity;
+            } else {
+                // Add the new product to the cart
+                cart.push(product);
+            }
+
+            // Save the updated cart to localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        function goToCartPage() {
+            // Replace 'cart.html' with the URL of your shopping cart page
+            window.location.href = 'shoping cart.html';
+        }
+    </script>
+</body>
+
+</html>
